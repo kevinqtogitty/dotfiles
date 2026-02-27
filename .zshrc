@@ -14,7 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # GIT shortcuts
 alias ga='git add'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gaa='git add .'
 alias gcb='git checkout -b'
 alias gunstaged='git diff --name-only'
@@ -22,3 +22,7 @@ alias gstaged='git diff --cached --name-only'
 alias gpo='git push origin'
 alias gpr='git pull --rebase'
 alias gsu='git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"'
+
+# EVALS
+eval "$(starship init zsh)"
+
