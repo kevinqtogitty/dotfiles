@@ -1,9 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_light_purple)\
+[](color_purple)\
 $os\
-[](bg:color_bg0 fg:color_light_purple)\
+[](bg:color_bg0 fg:color_purple)\
 $directory\
 [](bg:color_bg1 fg:color_bg0)\
 $git_branch\
@@ -28,7 +28,7 @@ color_yellow = '#ffc777'
 
 [os]
 disabled = false
-style = "bg:color_light_purple fg:color_fg2"
+style = "bg:color_purple fg:color_fg2"
 
 [os.symbols]
 Windows = "󰍲"
