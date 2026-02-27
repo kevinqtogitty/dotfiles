@@ -30,6 +30,10 @@ color_yellow = '#ffc777'
 disabled = false
 style = "bg:color_purple fg:color_fg2"
 
+[buf]
+disabled = true
+add_newline = false
+
 [os.symbols]
 Windows = "󰍲"
 Ubuntu = "󰕈"

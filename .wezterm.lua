@@ -3,6 +3,7 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 15
+
 config.enable_tab_bar = false
 config.window_decorations = "TITLE | RESIZE"
 config.term = "wezterm"
@@ -11,6 +12,14 @@ config.enable_wayland = true
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 50
 config.win32_system_backdrop = 'Acrylic'  -- wayland/x11 may vary
+
+config.keys = {
+  {
+    key = "Delete",
+    mods = "SHIFT",
+    action = wezterm.action.SendString "\x1b[3~"
+  }
+}
 
 config.colors = {
   foreground = "#F0F0F0",

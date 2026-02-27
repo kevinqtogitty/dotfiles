@@ -1,9 +1,5 @@
-# Zap plugin manager
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
-plug "zsh-users/zsh-syntax-highlighting"
+# Load plugins
+source ~/.zsh/plugins.zsh
 
 # Load and initialise completion system
 autoload -Uz compinit
@@ -22,6 +18,9 @@ alias gstaged='git diff --cached --name-only'
 alias gpo='git push origin'
 alias gpr='git pull --rebase'
 alias gsu='git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"'
+
+# Nix Rebuild commands
+alias mac-rebuild='sudo /run/current-system/sw/bin/darwin-rebuild switch --flake ~/nix-config#Kevins-MacBook-Air-2'
 
 # EVALS
 eval "$(starship init zsh)"
