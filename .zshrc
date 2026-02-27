@@ -1,6 +1,9 @@
 # Load plugins
 source ~/.zsh/plugins.zsh
 
+# Set up fzf key bindings and fuzz completion
+source <(fzf --zsh)
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
@@ -21,6 +24,11 @@ alias gsu='git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"'
 
 # Nix Rebuild commands
 alias mac-rebuild='sudo /run/current-system/sw/bin/darwin-rebuild switch --flake ~/nix-config#Kevins-MacBook-Air-2'
+
+# FZF commands
+alias fzf='fzf --preview="bat --color=always {}"'
+alias vimf='vim $(fzf -m --preview="bat --color=always {}")'
+
 
 # EVALS
 eval "$(starship init zsh)"
