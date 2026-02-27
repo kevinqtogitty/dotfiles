@@ -1,0 +1,44 @@
+local wezterm = require("wezterm")
+
+local config = wezterm.config_builder()
+
+config.font = wezterm.font("MesloLGS Nerd Font")
+config.font_size = 15
+config.enable_tab_bar = false
+config.window_decorations = "TITLE | RESIZE"
+config.colors = {
+  foreground = "#F0F0F0",
+  background = "#090622",
+
+  cursor_bg = "#ADFFBE",
+  cursor_fg = "#040119",
+  cursor_border = "#ADFFBE",
+
+  selection_fg = "#9DA5FB",
+  selection_bg = "#453E4C",
+
+  ansi = {
+    "#452A63",  -- black
+    "#C95647",  -- red
+    "#89FFEB",  -- green
+    "#F4D792",  -- yellow
+    "#524C7B",  -- blue
+    "#A77FE3",  -- magenta
+    "#CAFFD3",  -- cyan
+    "#D4FFC1",  -- white
+  },
+
+  brights = {
+    "#80BCE3",  -- bright black
+    "#A44A55",  -- bright red
+    "#69908A",  -- bright green
+    "#B18F4B",  -- bright yellow
+    "#B5B1FC",  -- bright blue
+    "#B68EE5",  -- bright magenta
+    "#65F1F5",  -- bright cyan
+    "#555EC0",  -- bright white
+  }
+}
+
+config.term = "wezterm"
+return config
