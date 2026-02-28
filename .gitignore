@@ -1,3 +1,6 @@
 *.un~
 *.swp
 .vim/plugged/
+result
+.DS_store
+*.vim/.netrwhist
