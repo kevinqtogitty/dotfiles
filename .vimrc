@@ -9,6 +9,15 @@ set relativenumber        " Show relative numbers for other lines
 set termguicolors
 colorscheme kyotonight
 
+" Lightline
+set laststatus=2
+set noshowmode
+let g:lightline = {
+    \ 'colorscheme': 'rosepine',
+    \ 'background': 'dark'
+    \ }
+
+
 " Clipboard
 set clipboard=unnamed,unnamedplus
 
