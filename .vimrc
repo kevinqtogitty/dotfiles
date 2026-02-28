@@ -16,6 +16,14 @@ let g:lightline = {
     \ 'colorscheme': 'ayu_mirage',
     \ }
 
+" Fern File Tree
+let g:fern#default_hidden = 1
+let g:fern#renderer = 'nerdfont'
+
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+augroup END
 
 " Clipboard
 set clipboard=unnamed,unnamedplus
@@ -49,3 +57,4 @@ set undofile
 " Key remaps
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprev<CR>
+noremap  <C-n> :Fern . -drawer -toggle<CR>

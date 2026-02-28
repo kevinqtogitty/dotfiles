@@ -3,8 +3,18 @@ call plug#begin('~/.vim/plugged')
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'itchyny/lightline.vim'
-
+Plug 'itchyny/lightline.vim'                   " statusline
+Plug 'lambdalisue/vim-fern'                    " file explorer
+Plug 'lambdalisue/nerdfont.vim'                " file glyphs
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'  " file glyphs renderer
+Plug 'lambdalisue/glyph-palette.vim'           " colored file glyphs
+Plug 'tpope/vim-surround'                      " easily change surrounding quotes/brackets
+Plug 'tpope/vim-commentary'                    " gc to comment/uncomment
+Plug 'jiangmiao/auto-pairs'                    " auto close brackets and quotes
+Plug 'junegunn/fzf.vim'                        " fzf inside vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'airblade/vim-gitgutter'                  " git diff signs in the gutter
+Plug 'tpope/vim-fugitive'                      " full git integration inside vim
 
 call plug#end()
 
