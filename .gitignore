@@ -3,4 +3,4 @@
 .vim/plugged/
 result
 .DS_store
-*.vim/.netrwhist
+.vim/.netrwhist

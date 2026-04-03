@@ -47,6 +47,10 @@ set softtabstop=2
 " Make backspace behave nicely
 set backspace=indent,eol,start
 
+" Reduce Esc key delay
+set ttimeout
+set ttimeoutlen=50
+
 " Optional: better searching
 set ignorecase
 set smartcase

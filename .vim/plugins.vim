@@ -10,11 +10,11 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'  " file glyphs renderer
 Plug 'lambdalisue/glyph-palette.vim'           " colored file glyphs
 Plug 'tpope/vim-surround'                      " easily change surrounding quotes/brackets
 Plug 'tpope/vim-commentary'                    " gc to comment/uncomment
+Plug 'tpope/vim-repeat'                        " make . repeat work with plugins
 Plug 'jiangmiao/auto-pairs'                    " auto close brackets and quotes
 Plug 'junegunn/fzf.vim'                        " fzf inside vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'airblade/vim-gitgutter'                  " git diff signs in the gutter
-Plug 'tpope/vim-fugitive'                      " full git integration inside vim
 
 call plug#end()
 
@@ -58,8 +58,7 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
 
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+    autocmd! BufWritePre * call execute('LspDocumentFormat')
 
     " refer to doc to add more commands
 endfunction
