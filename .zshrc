@@ -1,6 +1,3 @@
-# Load plugins
-source ~/.zsh/plugins.zsh
-
 # Set up fzf key bindings and fuzz completion
 source <(fzf --zsh)
 
@@ -24,6 +21,7 @@ alias gsu='git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"'
 
 # Nix Rebuild commands
 alias mac-rebuild='sudo /run/current-system/sw/bin/darwin-rebuild switch --flake ~/nix-config#Kevins-MacBook-Air-2'
+alias klaviyo-rebuild='sudo darwin-rebuild switch --impure --flake "path:/Users/kevin.to/nix-config?dir=klaviyo#KevinToMBP"'
 
 # FZF commands
 alias fzf='fzf --preview="bat --color=always {}"'
