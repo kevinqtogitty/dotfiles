@@ -5,3 +5,10 @@ result
 .DS_store
 .vim/.netrwhist
 .ssh/
+.config/klaviyo.d/
+.config/direnv/
+.config/gh/
+.config/op/
+.config/uv/
+.config/git/
+.config/configstore/
